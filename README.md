@@ -116,6 +116,12 @@ Detailed flow is documented in `docs/data-pipeline.md`.
    ```bash
    python scripts/reseed.py
    ```
+   On first startup, the app also auto-seeds if the database is empty.
+   To restore bundled demo stories after a live refresh:
+   ```bash
+   python scripts/restore_bundled_seed.py
+   python scripts/reseed.py
+   ```
 6. **Run backend**
    ```bash
    uvicorn app.main:app --reload
@@ -134,6 +140,12 @@ Detailed flow is documented in `docs/data-pipeline.md`.
    $env:ENABLE_SCHEDULER="true"
    ```
 
+## Testing
+
+```bash
+pytest -q
+```
+
 ## Environment Variables
 
 | Variable | Purpose | Required |
@@ -150,26 +162,38 @@ Detailed flow is documented in `docs/data-pipeline.md`.
 ```text
 .
 ├── app/
-│   ├── analysis.py
+│   ├── analysis.py          # TF-IDF clustering, disputes, framing, confidence
 │   ├── config.py
 │   ├── constants.py
 │   ├── db.py
-│   ├── ingest.py
+│   ├── ingest.py            # JSON seeding and normalization
 │   ├── main.py
 │   ├── models.py
 │   ├── routes/
+│   │   ├── api.py           # HTMX + health endpoints
+│   │   └── pages.py         # Server-rendered pages
+│   ├── scheduler.py         # Optional APScheduler jobs
 │   ├── schemas.py
-│   ├── scheduler.py
-│   ├── services.py
+│   ├── services.py          # View-model assembly
+│   ├── templating.py
+│   ├── data/                # Bundled seed + reference data
 │   ├── static/
 │   └── templates/
 ├── docs/
 │   ├── architecture.md
 │   └── data-pipeline.md
 ├── scripts/
+│   ├── refresh_all.py
+│   ├── refresh_news.py
+│   ├── refresh_reactions.py
+│   ├── refresh_rss.py
+│   ├── reseed.py
+│   └── restore_bundled_seed.py
 ├── tests/
+│   └── test_analysis.py
 ├── .env.example
 ├── .gitignore
+├── LICENSE
 ├── Procfile
 ├── README.md
 └── requirements.txt
@@ -191,4 +215,6 @@ Detailed flow is documented in `docs/data-pipeline.md`.
 - Add stronger deduplication and clustering across near-duplicate headlines
 - Add integration tests for refresh scripts and route-level contract tests
 
+## License
 
+MIT License. See [LICENSE](LICENSE).

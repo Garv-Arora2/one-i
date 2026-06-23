@@ -19,16 +19,16 @@ Current implementation includes:
 
 ```mermaid
 flowchart LR
-    U[Browser UI<br/>Jinja2 + HTMX + Alpine] --> API[FastAPI API Layer]
+    U[Browser UI Jinja2 HTMX Alpine] --> API[FastAPI API Layer]
     API --> SVC[Analysis and Service Layer]
     SVC --> DB[(SQLite Database)]
-    W[Background Scheduler<br/>APScheduler] --> JOB[scripts/refresh_all.py]
-    JOB --> EXT1[GNews API (optional)]
+    W[Background Scheduler APScheduler] --> JOB[Refresh Job script]
+    JOB --> EXT1[GNews API optional]
     JOB --> EXT2[RSS feeds]
-    JOB --> EXT3[Reddit JSON/API]
+    JOB --> EXT3[Reddit source]
     JOB --> DATA[Bundled seed JSON]
     DATA --> SVC
-    API --> CACHE[Cache Layer: not implemented]
+    API --> CACHE[Cache layer not implemented]
 ```
 
 ## Core Features
@@ -89,7 +89,7 @@ Detailed flow is documented in `docs/data-pipeline.md`.
 1. **Clone**
    ```bash
    git clone <your-repo-url>
-   cd one-i
+   cd "one i"
    ```
 2. **Create virtual environment**
    ```bash
@@ -105,7 +105,10 @@ Detailed flow is documented in `docs/data-pipeline.md`.
    ```
 4. **Configure environment variables**
    ```bash
+   # Linux/macOS
    cp .env.example .env
+   # Windows PowerShell
+   Copy-Item .env.example .env
    ```
 5. **Run database initialization and seed**
    ```bash
@@ -123,7 +126,10 @@ Detailed flow is documented in `docs/data-pipeline.md`.
    ```
    Or enable in-process scheduler:
    ```bash
-   ENABLE_SCHEDULER=true
+   # Linux/macOS
+   export ENABLE_SCHEDULER=true
+   # Windows PowerShell
+   $env:ENABLE_SCHEDULER="true"
    ```
 
 ## Environment Variables

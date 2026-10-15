@@ -2,11 +2,7 @@
 
 # ONE I
 
-### Show the difference. Let the reader decide.
-
-An investigative news reader that lines up how many outlets covered the same world event —
-what they agree on, which figures they disagree about, and which words they chose —
-without ever telling you who is "biased".
+### The news shapes what you believe. Who's checking the news?
 
 [![CI](https://github.com/Garv-Arora2/one-i/actions/workflows/ci.yml/badge.svg)](https://github.com/Garv-Arora2/one-i/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
@@ -20,77 +16,115 @@ without ever telling you who is "biased".
 
 </div>
 
----
+Meet **ONE I**, a media accountability engine built to question the stories we're told.
+
+It reads the same story across a dozen newsrooms at once and catches what no single
+article will ever show you: the death toll that changes depending on who you read, the
+one word that quietly turns a victim into a suspect, the fact that only two outlets
+bothered to mention. Then it lays it all out on one page, with the receipts, and hands
+you the magnifying glass.
+
+No bias scores. No AI verdicts. No one telling you what to think.
+**Just the evidence, side by side. You decide.**
 
 ## Why this exists
 
-When a missile hits an airport, one outlet reports 12 dead, another 13. One says the
-militia *attacked*, another that it *launched*. One outlet carries the government's
-statement, four don't mention it. Each article on its own reads as the whole story.
+One outlet says a country **attacked**. Another says it **retaliated**.
 
-ONE I reads them together. It groups articles about the same event, works out the
-individual developments, and shows — with each outlet's own sentences as evidence —
-exactly where the coverage lines up and where it doesn't.
+Same missiles. Same night. Same dead. The two words look like synonyms, but they aren't.
+One gives you an aggressor. The other gives you someone hitting back. Read only one of
+them and you walk away with an opinion you never chose to have.
 
-It deliberately stops there. There are no bias scores, no "trust ratings", no claims
-about intent. **The observable differences are the product; the judgement stays with the reader.**
+That's where bias starts to form. Not with outright lies, but with a verb, with a number
+rounded one way instead of the other, with the paragraph one newsroom kept and another
+cut for space.
 
-## A tour of one event
+Now think about the last headline you reposted. The story you shared with a strong
+caption. The take you were *sure* about. Which version of the story was it built on?
 
-### The front page
+ONE I exists so you never have to guess.
 
-Only events that several outlets reported with enough shared detail are published.
-One lead story, smaller stories alongside — no categories, no feed, no personalisation.
+## Follow one story through ONE I
+
+### 1. Start with the stories worth questioning
+
+ONE I only publishes a story once several outlets have covered it in enough detail to
+compare. No feed, no categories, no algorithm deciding what you should care about.
+Just the biggest stories, ready to be taken apart.
 
 <img src="docs/screenshots/front-page.png" alt="Front page with a large lead story and a column of the latest events" width="900">
 
-### The crux
+### 2. Get the crux in thirty seconds
 
-What happened, who is involved, and the figures being reported. The fraction beside
-each development is how many of the outlets carried it, so you can see at a glance
-what is established and what rests on one or two reports.
+What happened, who's involved, and the numbers being thrown around. Every point carries
+a small badge like **5/11**: five of the eleven outlets reported it. In one glance you can
+tell what's solid and what's resting on a single newsroom's word.
 
 <img src="docs/screenshots/event-crux.png" alt="Crux section listing what happened, who is involved, reported numbers and key developments with source counts" width="900">
 
-### How it unfolded
+### 3. Watch it unfold
 
-Every development in the order it was reported, with how many sources reported it.
-Points that most outlets did not carry are flagged.
+Every development in the order it was reported. The yellow ones are the details that most
+outlets never ran. Those are the parts of the story most readers never see.
 
-<img src="docs/screenshots/event-timeline.png" alt="Timeline of developments with timestamps and source counts" width="900">
+<img src="docs/screenshots/event-timeline.png" alt="Timeline of developments with timestamps and how many sources reported each" width="900">
 
-### Who covered it
+### 4. See who told you, and who didn't
 
-A grid of every outlet against every development: reported, not reported, or
-*coverage unclear* when the evidence isn't strong enough to say. Click any mark to
-read the sentence that decided it. A gap is described as "not reported" — never as
-"omitted" — because a missing paragraph can just as easily mean a deadline or a word limit.
+Every outlet against every development, in one grid. A tick means they reported it, a
+cross means they didn't, and a question mark means the evidence is too thin to say
+either way. Click any mark to read exactly what that outlet wrote.
 
-<img src="docs/screenshots/event-coverage.png" alt="Coverage section with the developments most outlets did not report and an outlet-by-development grid" width="900">
+A missing fact is labelled *not reported*, never *hidden*. A gap can just as easily mean
+a deadline or a word limit, and ONE I won't pretend to know which.
 
-### Where the numbers differ
+<img src="docs/screenshots/event-coverage.png" alt="Coverage section listing details most outlets did not report and a grid of outlets against developments" width="900">
 
-Figures are only placed side by side when they measure the same thing, in the same
-unit, over the same period. A single strike's toll is never compared with a war's
-running total; soldiers are never compared with civilians. Each dot is one outlet,
-and clicking it shows the original wording.
+### 5. Catch the numbers that don't match
 
-<img src="docs/screenshots/event-numbers.png" alt="Number comparison showing 20 versus 21 people killed and 15 versus 45 injured" width="900">
+A building collapses in Gaza. One outlet reports **20 dead**, another **21**. One reports
+**15 injured**, another **45**. That's three times as many.
 
-### The word that changed
+ONE I only puts two figures side by side when they really measure the same thing: same
+people, same unit, same period. A single strike is never compared with a war's total,
+and soldiers are never compared with civilians. Click a dot to read the sentence each
+figure came from.
 
-The same development, as two outlets wrote it, with the telling word highlighted —
-*attack* versus *launch*, *killed* versus *died*. ONE I names the kind of difference
-(action, responsibility, severity, certainty) and does not pick a winner.
+<img src="docs/screenshots/event-numbers.png" alt="Number comparison: 20 versus 21 people killed and 15 versus 45 people injured" width="900">
 
-<img src="docs/screenshots/event-wording.png" alt="Side-by-side wording comparison of two outlets describing the same development" width="900">
+### 6. Find the word that changed
 
-### Public response
+**Attacked or defended?** The same act can be written either way, and the word an
+outlet picks decides who you see as the aggressor before you've finished the sentence.
 
-The most-liked YouTube comments that are actually about the event. This is shown as
-public discussion, explicitly not as evidence.
+Take Ukraine's drone strikes on the warehouses of Wildberries, Russia's biggest online
+retailer, in the summer of 2026:
 
-<img src="docs/screenshots/event-reaction.png" alt="Most-liked YouTube comments about the event" width="900">
+> [Reuters](https://reuters.com/world/europe/ukrainian-drone-attacks-kill-seven-warehouse-workers-russia-spark-fire-moscow-2026-07-18): "Ukrainian drone **attacks** killed seven workers and injure 49 others at Wildberries warehouses"
+>
+> [BBC News](https://bbc.co.uk/news/articles/ce973yvk7pko): "Ukraine has escalated its **retaliatory** strikes in recent months, including attacks on several retail warehouses belonging to Russia's biggest online retailer, Wildberries."
+
+Ukraine attacked. Ukraine retaliated. Same strikes, two different stories. Then in August,
+when Russian missiles hit Kyiv, [Al Jazeera](https://aljazeera.com/news/2026/8/6/russian-strikes-kill-six-in-ukraine-as-moscow-intercepts-hundreds-of-drones)
+described that attack as *"seen as **retaliation** for Ukraine's strikes on e-commerce giant
+Wildberries."* Now Russia is the one hitting back. Depending on what you read, either side
+can be the one who started it.
+
+ONE I puts sentences like these next to each other, highlights the words that differ,
+and says what kind of difference it is: action, responsibility, severity or certainty.
+It never says which one is right. Here it is in the app, on the Gaza collapse: The New
+York Times says the building was *"previously damaged by an Israeli **strike**"*, while BBC
+News says a *"war-damaged Gaza building **collapses**"*. One names a cause. The other
+leaves it to "war".
+
+<img src="docs/screenshots/event-wording.png" alt="Wording comparison: The New York Times says the building was damaged by an Israeli strike, BBC News says a war-damaged Gaza building collapses" width="900">
+
+### 7. Hear what people are saying
+
+The most-liked YouTube comments that are actually about the story. Shown for what they
+are: public discussion, not proof of anything.
+
+<img src="docs/screenshots/event-reaction.png" alt="Most-liked YouTube comments about the story" width="900">
 
 ## How it works
 
@@ -247,7 +281,7 @@ scripts/          scheduled daily update
 
 ## Documentation
 
-- [Principles](docs/principles.md) — the rules the product is built on, and what V1 deliberately leaves out
+- [Principles](docs/principles.md): the rules the product is built on, and what V1 deliberately leaves out
 - [Product](docs/product.md) and [design](docs/design.md)
 - [Architecture](docs/architecture.md), [database](docs/database.md) and [API](docs/api.md)
 - Feature specs: [crux](docs/specs/crux.md), [coverage](docs/specs/coverage.md), [numbers and framing](docs/specs/framing-and-numbers.md), [public reaction](docs/specs/public-reaction.md)

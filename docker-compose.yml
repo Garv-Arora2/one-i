@@ -1,0 +1,17 @@
+# Local PostgreSQL for ONE I.
+#   docker compose up -d
+#   DATABASE_URL=postgresql+psycopg://one_i:one_i@localhost:5432/one_i
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: one_i
+      POSTGRES_PASSWORD: one_i
+      POSTGRES_DB: one_i
+    ports:
+      - "5432:5432"
+    volumes:
+      - one_i_pg:/var/lib/postgresql/data
+
+volumes:
+  one_i_pg:

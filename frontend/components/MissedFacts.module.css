@@ -1,0 +1,64 @@
+.missedBox {
+  margin: 1.1rem 0 0.4rem;
+  padding: 0.95rem 1.05rem 1.05rem;
+  border: 2px solid var(--warn);
+  background: var(--warn-dim);
+}
+
+.missedKicker {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--warn);
+  margin: 0 0 0.35rem;
+}
+
+.missedLead {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  margin: 0 0 0.75rem;
+  max-width: 68ch;
+}
+
+.missedList {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.missedList li {
+  font-size: 1.02rem;
+  line-height: 1.5;
+  margin-bottom: 0.45rem;
+}
+
+.missedList li::marker {
+  color: var(--warn);
+}
+
+/* Hover a shortened point to read it in full. */
+.devTip {
+  position: relative;
+  cursor: help;
+  outline: none;
+}
+.devTip:hover::after,
+.devTip:focus-visible::after {
+  content: attr(data-full);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 30;
+  width: min(24rem, 80vw);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  padding: 0.6rem 0.75rem;
+  margin-top: 0.35rem;
+  white-space: normal;
+}

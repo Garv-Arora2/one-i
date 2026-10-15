@@ -1,0 +1,309 @@
+/*
+  ONE I – newsroom design system.
+  Dense, editorial, evidence-based. No AI aesthetics.
+  Design reference: Reuters, Guardian, BBC.
+*/
+
+/* ─── Custom properties ──────────────────────────────────────────────── */
+:root {
+  /* Palette */
+  --paper:        #f5f3ee;
+  --paper-deep:   #eceae3;
+  --paper-card:   #faf8f4;
+  --ink:          #0c0b09;
+  --ink-soft:     #37332d;
+  --ink-faint:    #756e62;
+  --rule:         #ccc7b9;
+  --rule-strong:  #a8a093;
+  --accent:       #bb2f20;   /* news red – kickers, breaks */
+  --accent-dim:   #f4e8e6;
+
+  /* Signal colours — used only where they mean something */
+  --good:         #1a7a38;   /* covered, agreement */
+  --good-dim:     #e5f2e8;
+  --bad:          #c0392b;   /* not covered, discrepancy */
+  --bad-dim:      #f9e9e7;
+  --warn:         #b97e0a;   /* unclear, poorly covered */
+  --warn-dim:     #faf0da;
+  --info:         #1d5fa8;   /* certainty / neutral analysis */
+  --info-dim:     #e7eef7;
+  --purple:       #6b3fa0;   /* responsibility aspect */
+  --purple-dim:   #f0e9f7;
+
+  /* Fonts */
+  --serif: "Iowan Old Style", Georgia, "Times New Roman", Times, serif;
+  --sans:  "Inter", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  --mono:  "SFMono-Regular", Consolas, "Courier New", monospace;
+
+  /* Layout */
+  --page:   1280px;
+  --narrow: 820px;
+  --gutter: clamp(1rem, 2.5vw, 2rem);
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─── Headings ───────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--serif);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.018em;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2rem, 5.5vw, 4rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+h3 { font-size: clamp(1.15rem, 2vw, 1.5rem); }
+h4 { font-size: 1.1rem; font-weight: 700; }
+
+p { margin: 0 0 0.85rem; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--info);
+  text-underline-offset: 3px;
+  text-decoration-color: var(--info);
+}
+a:hover { text-decoration-color: var(--accent); color: var(--accent); }
+
+button { font: inherit; color: inherit; cursor: pointer; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+img { display: block; max-width: 100%; }
+
+/* ─── Editorial primitives ───────────────────────────────────────────── */
+
+/* Section label above a headline */
+.kicker {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 0.4rem;
+  display: block;
+}
+.kicker-red  { color: var(--accent); }
+.kicker-ink  { color: var(--ink); }
+
+/* Small byline / timestamp metadata */
+.meta {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.01em;
+}
+
+/* Article standfirst */
+.standfirst {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.52;
+  color: var(--ink-soft);
+}
+
+/* Inline source attribution tag */
+.source-tag {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-left: 2px solid var(--accent);
+  padding-left: 0.45rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Pull quote */
+.pull-quote {
+  border-left: 3px solid var(--accent);
+  padding: 0.2rem 0 0.2rem 1rem;
+  margin: 0;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.45;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* Annotation / notice */
+.note {
+  font-family: var(--sans);
+  font-size: 0.83rem;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--rule-strong);
+  padding: 0.55rem 0.85rem;
+  background: var(--paper-deep);
+}
+
+/* Horizontal rules */
+.rule       { border: 0; border-top: 1px solid var(--rule);  margin: 1.75rem 0; }
+.rule-heavy { border: 0; border-top: 2px solid var(--ink);   margin: 0; }
+
+/* Accessibility */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+/* ─── Layout helpers ─────────────────────────────────────────────────── */
+.page-wrap  { max-width: var(--page);   margin: 0 auto; padding: 0 var(--gutter); }
+.narrow-wrap{ max-width: var(--narrow); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* ─── Buttons ────────────────────────────────────────────────────────── */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.55rem 1rem;
+  border: 1.5px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  transition: background 120ms, border-color 120ms, color 120ms;
+}
+.button:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.button-ghost {
+  background: transparent;
+  color: var(--ink);
+}
+.button-ghost:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.button-text {
+  background: transparent;
+  border-color: transparent;
+  color: var(--accent);
+  padding: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.button-text:hover { background: transparent; border-color: transparent; color: var(--ink); text-decoration: underline; }
+
+/* ─── Button hierarchy (v2) ──────────────────────────────────────────── */
+
+/* Discovery CTA: reserved for findings — "4 discrepancies →" */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 130ms ease, border-color 130ms ease;
+}
+.btn-primary:hover { background: var(--ink); border-color: var(--ink); }
+
+/* Secondary action: "Read original ↗" */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 130ms ease, color 130ms ease;
+}
+.btn-ghost:hover { background: var(--ink); color: var(--paper); }
+
+/* Navigation link: back links, tertiary actions */
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--ink-faint);
+  border: 0;
+  padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-text:hover { color: var(--accent); }
+
+/* ─── Image placeholder ──────────────────────────────────────────────── */
+.img-placeholder {
+  background: #1c1915;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.img-placeholder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 3px,
+    rgba(255,255,255,0.018) 3px,
+    rgba(255,255,255,0.018) 4px
+  );
+}
+
+/* ─── Demo label ─────────────────────────────────────────────────────── */
+.demo-label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border: 1px solid var(--rule-strong);
+  padding: 0.1rem 0.35rem;
+  vertical-align: middle;
+}
+
+/* ─── Focus ──────────────────────────────────────────────────────────── */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ─── Reduced motion ─────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

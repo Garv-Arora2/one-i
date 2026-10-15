@@ -1,0 +1,38 @@
+/* Minimal editorial notice — no cards, no icons */
+
+.notice {
+  border-left: 2px solid var(--rule-strong);
+  padding: 0.65rem 0.9rem;
+  background: var(--paper-deep);
+  margin: 0.75rem 0;
+}
+
+.title {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.3rem;
+}
+
+.body {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.body p { margin: 0; }
+
+/* Demo label — inline callout */
+.demoNotice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  color: var(--ink-faint);
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  padding: 0.35rem 0.75rem;
+}

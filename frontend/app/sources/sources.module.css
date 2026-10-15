@@ -1,0 +1,141 @@
+/* Sources pages — editorial tables */
+
+.page {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 2rem var(--gutter) 4rem;
+}
+
+/* ── Back link ─────────────────────────────────────────────────────────── */
+.back {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-decoration: none;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 1.5rem;
+}
+
+.back:hover { color: var(--accent); }
+
+/* ── Page intro ─────────────────────────────────────────────────────────── */
+.intro {
+  margin-bottom: 0;
+  max-width: 72ch;
+}
+
+/* ── Detail header ──────────────────────────────────────────────────────── */
+.detailHead {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detailFacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2.5rem;
+  margin-top: 0.75rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+}
+
+.detailFact {
+  display: flex;
+  flex-direction: column;
+  padding: 0.35rem 0;
+}
+
+.detailFactLabel {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.1rem;
+}
+
+.detailFactValue {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ── Table ──────────────────────────────────────────────────────────────── */
+.tableWrap {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+}
+
+.table thead th {
+  text-align: left;
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 600;
+  padding: 0 1.5rem 0.5rem 0;
+  border-bottom: 2px solid var(--ink);
+  white-space: nowrap;
+}
+
+.table tbody td {
+  padding: 0.75rem 1.5rem 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: baseline;
+}
+
+.name {
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+
+.name a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.name a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.domain {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  margin-top: 0.1rem;
+}
+
+.kind {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.numeric {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .table thead th:nth-child(5),
+  .table tbody td:nth-child(5),
+  .table thead th:nth-child(6),
+  .table tbody td:nth-child(6) {
+    display: none;
+  }
+}

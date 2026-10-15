@@ -1,0 +1,227 @@
+{
+  "notice": "Manually reviewed evaluation set for the ONE I analysis modules. The article corpus is the fictional demo dataset (backend/app/seed/demo_dataset.json). Every label below was assigned by reading the text, not by running the system.",
+  "grouping": {
+    "description": "Each demo article is assigned to the event it belongs to. All 105 article pairs are derived from these assignments and used to score the pairwise linking decision.",
+    "article_events": {
+      "https://calderwire.example/2026/03/03/vantor-fairmont-hollow-release": "vantor-leak",
+      "https://meridianledger.example/news/2026/03/vantor-industries-fairmont-hollow-leak": "vantor-leak",
+      "https://northgatepost.example/2026/03/03/vantor-industries-solvent-release": "vantor-leak",
+      "https://beaconbroadcasting.example/story/vantor-industries-investigation": "vantor-leak",
+      "https://harbourbusinessdaily.example/markets/vantor-industries-suspends-output": "vantor-leak",
+      "https://fairmontherald.example/2026/03/04/evacuation-order-lifted": "vantor-leak",
+      "https://calderwire.example/2026/03/04/fairmont-hollow-evacuation-lifted": "vantor-leak",
+      "https://meridianledger.example/news/2026/03/harbourside-housing-approved": "harbourside-housing",
+      "https://northgatepost.example/2026/03/01/harbourside-housing-objections": "harbourside-housing",
+      "https://beaconbroadcasting.example/story/harbourside-rail-yard-homes": "harbourside-housing",
+      "https://fairmontherald.example/2026/03/02/harbourside-decision-renters": "harbourside-housing",
+      "https://calderwire.example/2026/02/26/harbour-port-strike-ends": "port-strike",
+      "https://harbourbusinessdaily.example/logistics/harbour-port-restart": "port-strike",
+      "https://northgatepost.example/2026/02/26/dock-workers-accept-pay-deal": "port-strike",
+      "https://beaconbroadcasting.example/story/harbour-port-strike-ends": "port-strike"
+    }
+  },
+  "coverage": {
+    "description": "For a fixed development probe, whether each article reports it. 'not_applicable' means the article was published before the development happened.",
+    "probes": [
+      {
+        "id": "evacuation-ordered",
+        "text": "Meridian County officials ordered the evacuation of residents living within two kilometres of the plant.",
+        "occurred_at": "2026-03-03T07:45:00Z",
+        "labels": {
+          "https://calderwire.example/2026/03/03/vantor-fairmont-hollow-release": "covered",
+          "https://meridianledger.example/news/2026/03/vantor-industries-fairmont-hollow-leak": "covered",
+          "https://northgatepost.example/2026/03/03/vantor-industries-solvent-release": "covered",
+          "https://beaconbroadcasting.example/story/vantor-industries-investigation": "covered",
+          "https://harbourbusinessdaily.example/markets/vantor-industries-suspends-output": "covered",
+          "https://calderwire.example/2026/02/26/harbour-port-strike-ends": "not_applicable",
+          "https://meridianledger.example/news/2026/03/harbourside-housing-approved": "not_applicable"
+        }
+      },
+      {
+        "id": "evacuation-lifted",
+        "text": "Meridian County lifted the evacuation order for Fairmont Hollow on Wednesday after air quality readings returned to normal levels.",
+        "occurred_at": "2026-03-04T08:00:00Z",
+        "labels": {
+          "https://fairmontherald.example/2026/03/04/evacuation-order-lifted": "covered",
+          "https://calderwire.example/2026/03/04/fairmont-hollow-evacuation-lifted": "covered",
+          "https://calderwire.example/2026/03/03/vantor-fairmont-hollow-release": "not_applicable",
+          "https://meridianledger.example/news/2026/03/vantor-industries-fairmont-hollow-leak": "not_applicable",
+          "https://beaconbroadcasting.example/story/vantor-industries-investigation": "not_applicable"
+        }
+      },
+      {
+        "id": "share-price-fell",
+        "text": "Shares in Vantor Industries fell 6.2% on Tuesday, the steepest single-day move in the company's shares since its listing.",
+        "occurred_at": "2026-03-03T16:05:00Z",
+        "labels": {
+          "https://harbourbusinessdaily.example/markets/vantor-industries-suspends-output": "covered",
+          "https://meridianledger.example/news/2026/03/vantor-industries-fairmont-hollow-leak": "not_applicable",
+          "https://calderwire.example/2026/03/04/fairmont-hollow-evacuation-lifted": "not_covered",
+          "https://fairmontherald.example/2026/03/04/evacuation-order-lifted": "not_covered"
+        }
+      },
+      {
+        "id": "housing-plan-size",
+        "text": "The plan allows the construction of 1,400 homes on the former Harbourside rail yard.",
+        "occurred_at": "2026-03-01T18:30:00Z",
+        "labels": {
+          "https://meridianledger.example/news/2026/03/harbourside-housing-approved": "covered",
+          "https://northgatepost.example/2026/03/01/harbourside-housing-objections": "covered",
+          "https://beaconbroadcasting.example/story/harbourside-rail-yard-homes": "covered",
+          "https://fairmontherald.example/2026/03/02/harbourside-decision-renters": "covered",
+          "https://calderwire.example/2026/03/03/vantor-fairmont-hollow-release": "not_covered",
+          "https://beaconbroadcasting.example/story/harbour-port-strike-ends": "not_applicable"
+        }
+      },
+      {
+        "id": "strike-participation",
+        "text": "About 1,800 workers took part in the strike, which began on 15 February.",
+        "occurred_at": "2026-02-26T12:00:00Z",
+        "labels": {
+          "https://calderwire.example/2026/02/26/harbour-port-strike-ends": "covered",
+          "https://harbourbusinessdaily.example/logistics/harbour-port-restart": "covered",
+          "https://northgatepost.example/2026/02/26/dock-workers-accept-pay-deal": "covered",
+          "https://beaconbroadcasting.example/story/harbour-port-strike-ends": "covered",
+          "https://meridianledger.example/news/2026/03/harbourside-housing-approved": "not_covered"
+        }
+      }
+    ]
+  },
+  "number_equivalence": {
+    "description": "Whether two numerical claims describe the same thing and may therefore be compared.",
+    "pairs": [
+      {
+        "left": "County records show that 3,200 residents were evacuated from the area.",
+        "right": "About 4,000 residents were evacuated from the area.",
+        "comparable": true,
+        "note": "Same subject, unit and context; the values genuinely differ."
+      },
+      {
+        "left": "Vantor Industries said the release involved about 12 tonnes of industrial solvent.",
+        "right": "The company said the release involved about 9 tonnes of industrial solvent.",
+        "comparable": true
+      },
+      {
+        "left": "Air quality monitors recorded readings above the legal limit at 30% of measurement stations.",
+        "right": "Air quality monitors recorded readings above the legal limit at 20% of measurement stations.",
+        "comparable": true,
+        "note": "Difference must be expressed as 10 percentage points."
+      },
+      {
+        "left": "The dock workers union said the agreement gives a 4.5% pay increase for the current year.",
+        "right": "The agreement gives a 4.2% pay increase for the current year, according to the port authority.",
+        "comparable": true
+      },
+      {
+        "left": "The plan allows the construction of 1,400 homes on the former Harbourside rail yard.",
+        "right": "The plan allows the construction of 1,200 homes on the former Harbourside rail yard.",
+        "comparable": true
+      },
+      {
+        "left": "Council documents state that 25% of the homes will be sold or let below market rates.",
+        "right": "Council documents state that 30% of the homes will be sold or let below market rates.",
+        "comparable": true
+      },
+      {
+        "left": "About 1,800 workers took part in the strike.",
+        "right": "About 2,000 workers took part in the strike.",
+        "comparable": true
+      },
+      {
+        "left": "About 240 workers were on site at the time of the release.",
+        "right": "About 240 workers were on site at the time of the release.",
+        "comparable": true,
+        "note": "Sources agree; still a valid comparison."
+      },
+      {
+        "left": "About 4,000 residents were evacuated from the area.",
+        "right": "About 4,000 residents attended the county meeting last year.",
+        "comparable": false,
+        "note": "Same number and unit, different subject and period."
+      },
+      {
+        "left": "The release involved about 12 tonnes of industrial solvent.",
+        "right": "About 12 residents were treated at the scene.",
+        "comparable": false,
+        "note": "Different units."
+      },
+      {
+        "left": "Shares in Vantor Industries fell 6.2% on Tuesday.",
+        "right": "Readings were above the legal limit at 6.2% of measurement stations.",
+        "comparable": false,
+        "note": "A percentage change is not a percentage level."
+      },
+      {
+        "left": "The share of affected stations rose by 10 percentage points over the period.",
+        "right": "The share of affected stations was 10% over the period.",
+        "comparable": false,
+        "note": "Percentage points and percent are different quantities."
+      },
+      {
+        "left": "The company reported a 4.5 million dollars charge for the quarter.",
+        "right": "The regulator issued a $2 million fine to the operator.",
+        "comparable": false,
+        "note": "Different subjects."
+      },
+      {
+        "left": "Unemployment in the county was 6% in 2024.",
+        "right": "Unemployment in the county was 5% in 2025.",
+        "comparable": false,
+        "note": "Different time periods must not be compared as one claim."
+      }
+    ]
+  },
+  "wording_difference": {
+    "description": "Whether a pair of passages should be shown to the reader as a meaningful wording difference.",
+    "pairs": [
+      {
+        "left": "Vantor Industries admitted that a valve at the plant had not been inspected since 2023.",
+        "right": "Vantor Industries responded to allegations that a valve at its plant was overdue for inspection.",
+        "meaningful": true,
+        "aspects": ["responsibility", "certainty"]
+      },
+      {
+        "left": "The Meridian County Fire Department described the incident as a severe chemical leak.",
+        "right": "A spokesperson described the incident as a limited release that was contained within the plant boundary.",
+        "meaningful": true,
+        "aspects": ["severity"]
+      },
+      {
+        "left": "Inspectors said Vantor mishandled the maintenance schedule for a valve that failed.",
+        "right": "Vantor Industries confirmed that a valve failure caused the release.",
+        "meaningful": true,
+        "aspects": ["evaluation", "responsibility", "certainty"]
+      },
+      {
+        "left": "Meridian City Council approved the Harbourside housing plan on Sunday evening.",
+        "right": "Meridian City Council pushed through the Harbourside housing plan despite objections from residents.",
+        "meaningful": true,
+        "aspects": ["evaluation"]
+      },
+      {
+        "left": "The county halted operations at the site on Tuesday.",
+        "right": "The county suspended operations at the site on Tuesday.",
+        "meaningful": false,
+        "note": "Trivial synonym."
+      },
+      {
+        "left": "The port authority said container operations would restart on Friday morning.",
+        "right": "The port authority said container operations would restart on Friday morning.",
+        "meaningful": false,
+        "note": "Identical wording."
+      },
+      {
+        "left": "The union said members voted to accept the agreement at meetings held on Wednesday evening.",
+        "right": "Union members voted to accept the agreement at meetings held on Wednesday evening.",
+        "meaningful": false,
+        "note": "Same statement, negligible rewording."
+      },
+      {
+        "left": "Residents of the Harbourside district objected to the height of the proposed buildings.",
+        "right": "The forecast for the region is mild for the weekend.",
+        "meaningful": false,
+        "note": "Unrelated passages carry no comparable wording."
+      }
+    ]
+  }
+}

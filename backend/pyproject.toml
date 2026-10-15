@@ -1,0 +1,13 @@
+[project]
+name = "one-i-backend"
+version = "1.0.0"
+description = "ONE I backend: ingestion, analysis and API for event-centric news comparison"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]

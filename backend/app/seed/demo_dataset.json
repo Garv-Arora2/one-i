@@ -1,0 +1,190 @@
+{
+  "notice": "FICTIONAL SAMPLE DATA. Every source, article, person, company, symbol, post and price in this file is invented for demonstration and local development. Nothing here describes a real event or a real organisation. Rows loaded from this file are stored with is_demo = true and are never mixed with data ingested from live providers.",
+  "dataset_version": "1.0.0",
+  "sources": [
+    { "name": "The Meridian Ledger", "domain": "meridianledger.example", "source_type": "news_outlet" },
+    { "name": "Northgate Post", "domain": "northgatepost.example", "source_type": "news_outlet" },
+    { "name": "Calder Wire Service", "domain": "calderwire.example", "source_type": "wire_service" },
+    { "name": "Beacon Broadcasting", "domain": "beaconbroadcasting.example", "source_type": "broadcaster" },
+    { "name": "Harbour Business Daily", "domain": "harbourbusinessdaily.example", "source_type": "news_outlet" },
+    { "name": "Fairmont Local Herald", "domain": "fairmontherald.example", "source_type": "news_outlet" }
+  ],
+  "articles": [
+    {
+      "event_hint": "vantor-leak",
+      "source_domain": "calderwire.example",
+      "title": "Chemical release reported at Vantor Industries plant in Fairmont Hollow",
+      "url": "https://calderwire.example/2026/03/03/vantor-fairmont-hollow-release",
+      "published_at": "2026-03-03T07:45:00Z",
+      "content": "A chemical release was detected early on Tuesday at the Vantor Industries plant in Fairmont Hollow, Meridian County. Plant operators reported the release shortly after 05:00 local time. Meridian County officials ordered the evacuation of residents living within two kilometres of the plant. County records show that 3,200 residents were evacuated from the area. Vantor Industries confirmed that a valve failure caused the release of an industrial solvent. About 240 workers were on site at the time of the release. The company suspended operations at the Fairmont Hollow site while the cause is examined. The Meridian County Fire Department closed the perimeter road and asked drivers to avoid the area. Emergency services said no injuries had been reported by Tuesday morning."
+    },
+    {
+      "event_hint": "vantor-leak",
+      "source_domain": "meridianledger.example",
+      "title": "Chemical leak at Vantor Industries plant forces evacuation in Fairmont Hollow",
+      "url": "https://meridianledger.example/news/2026/03/vantor-industries-fairmont-hollow-leak",
+      "published_at": "2026-03-03T09:20:00Z",
+      "content": "A chemical leak was detected early on Tuesday at the Vantor Industries plant in Fairmont Hollow, Meridian County. Meridian County officials ordered the evacuation of residents living within two kilometres of the plant. County records show that 3,200 residents were evacuated from the area. Vantor Industries said the release involved about 12 tonnes of industrial solvent. The Meridian County Fire Department described the incident as a severe chemical leak that required a full perimeter closure. Air quality monitors recorded readings above the legal limit at 30% of measurement stations around Fairmont Hollow. Vantor Industries admitted that a valve at the plant had not been inspected since 2023. The company suspended operations at the Fairmont Hollow site while the investigation continues. Meridian County said shelters at two schools remained open on Tuesday evening."
+    },
+    {
+      "event_hint": "vantor-leak",
+      "source_domain": "northgatepost.example",
+      "title": "Vantor Industries responds after solvent release near Fairmont Hollow",
+      "url": "https://northgatepost.example/2026/03/03/vantor-industries-solvent-release",
+      "published_at": "2026-03-03T11:10:00Z",
+      "content": "Vantor Industries has responded to allegations that a valve at its Fairmont Hollow plant was overdue for inspection. A solvent release was detected at the plant early on Tuesday in Meridian County. Meridian County officials ordered the evacuation of residents living close to the plant, and 4,000 residents were evacuated from the area according to figures given by the county. The company said the release involved about 9 tonnes of industrial solvent. A spokesperson described the incident as a limited release that was contained within the plant boundary. Air quality monitors recorded readings above the legal limit at 20% of measurement stations around Fairmont Hollow. Vantor Industries suspended operations at the Fairmont Hollow site pending an internal review. The company said it would cooperate with the county investigation."
+    },
+    {
+      "event_hint": "vantor-leak",
+      "source_domain": "beaconbroadcasting.example",
+      "title": "Regulator opens investigation into Vantor Industries chemical leak",
+      "url": "https://beaconbroadcasting.example/story/vantor-industries-investigation",
+      "published_at": "2026-03-03T14:30:00Z",
+      "content": "The Meridian County environmental regulator has opened an investigation into the chemical leak at the Vantor Industries plant in Fairmont Hollow. Inspectors said Vantor mishandled the maintenance schedule for a valve that failed early on Tuesday. Meridian County officials ordered the evacuation of residents near the plant, and about 3,500 residents were evacuated from the area. The regulator said air quality readings would be published every six hours. Vantor Industries suspended operations at the Fairmont Hollow site on Tuesday afternoon. The Meridian County Fire Department said the perimeter closure would remain in place overnight. Local schools in Fairmont Hollow were closed for the day as a precaution."
+    },
+    {
+      "event_hint": "vantor-leak",
+      "source_domain": "harbourbusinessdaily.example",
+      "title": "Vantor Industries suspends Fairmont Hollow output after leak",
+      "url": "https://harbourbusinessdaily.example/markets/vantor-industries-suspends-output",
+      "published_at": "2026-03-03T16:05:00Z",
+      "content": "Vantor Industries suspended operations at its Fairmont Hollow plant on Tuesday after a chemical leak at the site in Meridian County. Shares in Vantor Industries fell 6.2% on Tuesday, the steepest single-day move in the company's shares since its listing. About 240 workers were on site at the time of the release, the company said. Analysts at Calder Research said the Fairmont Hollow plant accounts for a meaningful share of the group's solvent output. Vantor Industries confirmed that a valve failure caused the release. The company said it could not yet estimate the cost of the suspension. Meridian County officials ordered the evacuation of residents near the plant earlier on Tuesday."
+    },
+    {
+      "event_hint": "vantor-leak",
+      "source_domain": "fairmontherald.example",
+      "title": "Evacuation order lifted in Fairmont Hollow as readings return to normal",
+      "url": "https://fairmontherald.example/2026/03/04/evacuation-order-lifted",
+      "published_at": "2026-03-04T08:00:00Z",
+      "content": "Meridian County lifted the evacuation order for Fairmont Hollow on Wednesday morning after air quality readings returned to normal levels. Residents who left their homes on Tuesday were allowed to return from 07:00. County officials said monitoring stations recorded no readings above the legal limit overnight. The Vantor Industries plant remains closed while the county investigation continues. The Meridian County Fire Department reopened the perimeter road on Wednesday. Shelters at two schools in Fairmont Hollow were closed on Wednesday morning. Residents at a community meeting asked the county to publish the full inspection history of the plant."
+    },
+    {
+      "event_hint": "vantor-leak",
+      "source_domain": "calderwire.example",
+      "title": "Meridian County lifts Fairmont Hollow evacuation order",
+      "url": "https://calderwire.example/2026/03/04/fairmont-hollow-evacuation-lifted",
+      "published_at": "2026-03-04T10:40:00Z",
+      "content": "Meridian County lifted the evacuation order for Fairmont Hollow on Wednesday after air quality readings returned to normal levels. County officials said residents could return to their homes from 07:00 on Wednesday. The Vantor Industries plant remains closed while the county investigation continues. The environmental regulator confirmed that inspectors visited the Fairmont Hollow site on Wednesday morning. Vantor Industries said it would publish the results of an internal review. The Meridian County Fire Department reopened the perimeter road on Wednesday."
+    },
+    {
+      "event_hint": "harbourside-housing",
+      "source_domain": "meridianledger.example",
+      "title": "Meridian City Council approves Harbourside housing plan",
+      "url": "https://meridianledger.example/news/2026/03/harbourside-housing-approved",
+      "published_at": "2026-03-01T18:30:00Z",
+      "content": "Meridian City Council approved the Harbourside housing plan on Sunday evening after a debate that lasted more than four hours. The plan allows the construction of 1,400 homes on the former Harbourside rail yard. Council documents state that 25% of the homes will be sold or let below market rates. Council member Rina Okafor said the plan would begin to address a long waiting list for housing in Meridian. Residents of the Harbourside district objected to the height of the proposed buildings. The council voted to approve the plan by 21 votes to 14. Construction is expected to begin next year once the developer files detailed drawings."
+    },
+    {
+      "event_hint": "harbourside-housing",
+      "source_domain": "northgatepost.example",
+      "title": "Harbourside housing plan pushed through despite objections",
+      "url": "https://northgatepost.example/2026/03/01/harbourside-housing-objections",
+      "published_at": "2026-03-01T20:05:00Z",
+      "content": "Meridian City Council pushed through the Harbourside housing plan on Sunday evening despite objections from residents of the Harbourside district. The plan allows the construction of 1,200 homes on the former Harbourside rail yard, according to the developer's summary document. Council documents state that 30% of the homes will be sold or let below market rates. Objectors said the consultation period was inadequate and criticised the council for scheduling the vote on a Sunday. The council voted to approve the plan by 21 votes to 14. Council member Rina Okafor said the plan would begin to address a long waiting list for housing in Meridian."
+    },
+    {
+      "event_hint": "harbourside-housing",
+      "source_domain": "beaconbroadcasting.example",
+      "title": "Council narrowly approves 1,400 homes at Harbourside rail yard",
+      "url": "https://beaconbroadcasting.example/story/harbourside-rail-yard-homes",
+      "published_at": "2026-03-01T21:40:00Z",
+      "content": "Meridian City Council narrowly approved the Harbourside housing plan on Sunday evening. The plan allows the construction of 1,400 homes on the former Harbourside rail yard in the Harbourside district. The council voted to approve the plan by 21 votes to 14 after a debate that lasted more than four hours. Residents of the Harbourside district objected to the height of the proposed buildings and to the loss of a public path. Council documents state that 25% of the homes will be sold or let below market rates. The developer said construction is expected to begin next year."
+    },
+    {
+      "event_hint": "harbourside-housing",
+      "source_domain": "fairmontherald.example",
+      "title": "What the Harbourside decision means for Meridian renters",
+      "url": "https://fairmontherald.example/2026/03/02/harbourside-decision-renters",
+      "published_at": "2026-03-02T09:15:00Z",
+      "content": "Meridian City Council approved the Harbourside housing plan on Sunday evening, and housing groups have begun to assess what the decision means for renters. The plan allows the construction of 1,400 homes on the former Harbourside rail yard. Council documents state that 25% of the homes will be sold or let below market rates. A tenants group said the waiting list for social housing in Meridian stood at 9,800 households last year. Residents of the Harbourside district objected to the height of the proposed buildings. The council has not yet published a construction timetable."
+    },
+    {
+      "event_hint": "port-strike",
+      "source_domain": "calderwire.example",
+      "title": "Harbour port workers end strike after pay agreement",
+      "url": "https://calderwire.example/2026/02/26/harbour-port-strike-ends",
+      "published_at": "2026-02-26T12:00:00Z",
+      "content": "Workers at Harbour Port ended an eleven-day strike on Thursday after agreeing a pay deal with the port authority. The agreement gives a 4.5% pay increase for the current year, according to the dock workers union. About 1,800 workers took part in the strike, which began on 15 February. The port authority said container operations would restart on Friday morning. The union said members voted to accept the agreement at meetings held on Wednesday evening. Harbour Port handles the majority of container traffic for the Meridian region."
+    },
+    {
+      "event_hint": "port-strike",
+      "source_domain": "harbourbusinessdaily.example",
+      "title": "Harbour Port to restart container operations after strike deal",
+      "url": "https://harbourbusinessdaily.example/logistics/harbour-port-restart",
+      "published_at": "2026-02-26T14:25:00Z",
+      "content": "Harbour Port will restart container operations on Friday after the dock workers union agreed a pay deal with the port authority on Thursday. The agreement gives a 4.2% pay increase for the current year, according to the port authority. About 2,000 workers took part in the eleven-day strike, which began on 15 February. Shipping lines diverted 14 vessels to other regional ports during the strike. The port authority said the backlog would take about two weeks to clear. Harbour Port handles the majority of container traffic for the Meridian region."
+    },
+    {
+      "event_hint": "port-strike",
+      "source_domain": "northgatepost.example",
+      "title": "Dock workers accept pay deal, ending Harbour Port stoppage",
+      "url": "https://northgatepost.example/2026/02/26/dock-workers-accept-pay-deal",
+      "published_at": "2026-02-26T16:40:00Z",
+      "content": "Dock workers voted to accept a pay deal on Thursday, ending an eleven-day stoppage at Harbour Port. The dock workers union said the agreement gives a 4.5% pay increase for the current year. About 1,800 workers took part in the strike, which began on 15 February. Union representatives said the deal also includes changes to shift rosters that had been a central demand. The port authority said container operations would restart on Friday morning. Shipping lines diverted vessels to other regional ports during the stoppage."
+    },
+    {
+      "event_hint": "port-strike",
+      "source_domain": "beaconbroadcasting.example",
+      "title": "Strike at Harbour Port ends after eleven days",
+      "url": "https://beaconbroadcasting.example/story/harbour-port-strike-ends",
+      "published_at": "2026-02-26T18:10:00Z",
+      "content": "The strike at Harbour Port ended on Thursday after eleven days when the dock workers union agreed a pay deal with the port authority. The port authority said container operations would restart on Friday morning. About 1,800 workers took part in the strike, which began on 15 February. The union said members voted to accept the agreement at meetings held on Wednesday evening. Local businesses near the port said deliveries had been delayed throughout the stoppage."
+    }
+  ],
+  "reactions": [
+    { "event_hint": "vantor-leak", "platform": "reddit", "external_id": "demo_r1", "content": "Anyone in Fairmont Hollow right now? The evacuation order came through at 6am and the shelters at the two schools were full by 8.", "published_at": "2026-03-03T08:40:00Z", "engagement": 412, "url": "https://reddit.example/r/meridian/comments/demo_r1", "community": "r/meridian" },
+    { "event_hint": "vantor-leak", "platform": "reddit", "external_id": "demo_r2", "content": "The numbers for how many residents were evacuated are all over the place. One outlet says 3,200 and another says 4,000. Which is it?", "published_at": "2026-03-03T12:15:00Z", "engagement": 388, "url": "https://reddit.example/r/meridian/comments/demo_r2", "community": "r/meridian" },
+    { "event_hint": "vantor-leak", "platform": "reddit", "external_id": "demo_r3", "content": "A valve that has not been inspected since 2023 is the part of this story that should get the attention. Maintenance schedules are not glamorous but this is why they exist.", "published_at": "2026-03-03T13:02:00Z", "engagement": 511, "url": "https://reddit.example/r/meridian/comments/demo_r3", "community": "r/meridian" },
+    { "event_hint": "vantor-leak", "platform": "reddit", "external_id": "demo_r4", "content": "Worth remembering the plant is one of the larger employers in the county. A long suspension has consequences for the workers too.", "published_at": "2026-03-03T15:20:00Z", "engagement": 240, "url": "https://reddit.example/r/meridian/comments/demo_r4", "community": "r/meridian" },
+    { "event_hint": "vantor-leak", "platform": "reddit", "external_id": "demo_r5", "content": "The air quality readings should be published in full. Saying that some stations were above the legal limit without the raw data is not enough.", "published_at": "2026-03-03T17:45:00Z", "engagement": 297, "url": "https://reddit.example/r/meridian/comments/demo_r5", "community": "r/environment" },
+    { "event_hint": "vantor-leak", "platform": "reddit", "external_id": "demo_r6", "content": "Evacuation order lifted this morning. Readings back to normal according to the county. Still no inspection history published.", "published_at": "2026-03-04T09:30:00Z", "engagement": 356, "url": "https://reddit.example/r/meridian/comments/demo_r6", "community": "r/meridian" },
+    { "event_hint": "vantor-leak", "platform": "reddit", "external_id": "demo_r7", "content": "The share price reaction tells you the market expects a long suspension at the Fairmont Hollow plant.", "published_at": "2026-03-03T18:05:00Z", "engagement": 168, "url": "https://reddit.example/r/investing/comments/demo_r7", "community": "r/investing" },
+    { "event_hint": "vantor-leak", "platform": "youtube", "external_id": "demo_y1", "content": "Fairmont Hollow evacuation explained: what we know about the Vantor Industries leak", "published_at": "2026-03-03T13:30:00Z", "engagement": 1240, "url": "https://youtube.example/watch?v=demo_y1", "community": "Meridian Daily Brief" },
+    { "event_hint": "vantor-leak", "platform": "youtube", "external_id": "demo_y2", "content": "The evacuation was handled well from what I saw on the ground. The information about air quality readings was slower than it should have been.", "published_at": "2026-03-03T16:10:00Z", "engagement": 302, "url": "https://youtube.example/watch?v=demo_y1", "community": "Meridian Daily Brief" },
+    { "event_hint": "vantor-leak", "platform": "youtube", "external_id": "demo_y3", "content": "Different outlets are reporting different figures for the amount of solvent released. Twelve tonnes and nine tonnes are not the same story.", "published_at": "2026-03-03T19:22:00Z", "engagement": 274, "url": "https://youtube.example/watch?v=demo_y1", "community": "Meridian Daily Brief" },
+    { "event_hint": "vantor-leak", "platform": "youtube", "external_id": "demo_y4", "content": "Residents deserve the full inspection history of the plant, not a summary published weeks later.", "published_at": "2026-03-04T11:05:00Z", "engagement": 189, "url": "https://youtube.example/watch?v=demo_y4", "community": "Fairmont Community Channel" },
+    { "event_hint": "harbourside-housing", "platform": "reddit", "external_id": "demo_r8", "content": "1,400 homes at the Harbourside rail yard is a real change for the district. The share sold below market rates is the number I would watch.", "published_at": "2026-03-01T21:10:00Z", "engagement": 221, "url": "https://reddit.example/r/meridian/comments/demo_r8", "community": "r/meridian" },
+    { "event_hint": "harbourside-housing", "platform": "reddit", "external_id": "demo_r9", "content": "Two outlets are quoting different numbers of homes for the same plan. One says 1,400 and one says 1,200.", "published_at": "2026-03-02T08:20:00Z", "engagement": 176, "url": "https://reddit.example/r/meridian/comments/demo_r9", "community": "r/meridian" },
+    { "event_hint": "harbourside-housing", "platform": "reddit", "external_id": "demo_r10", "content": "Scheduling the vote on a Sunday evening did not help the council's case with residents of the Harbourside district.", "published_at": "2026-03-02T10:45:00Z", "engagement": 143, "url": "https://reddit.example/r/meridian/comments/demo_r10", "community": "r/meridian" },
+    { "event_hint": "harbourside-housing", "platform": "youtube", "external_id": "demo_y5", "content": "Harbourside housing plan approved: what happens to the rail yard next", "published_at": "2026-03-02T12:00:00Z", "engagement": 640, "url": "https://youtube.example/watch?v=demo_y5", "community": "Meridian Daily Brief" },
+    { "event_hint": "port-strike", "platform": "reddit", "external_id": "demo_r11", "content": "Eleven days of the port being closed and the backlog will take about two weeks to clear. Small importers take the worst of that.", "published_at": "2026-02-26T15:00:00Z", "engagement": 198, "url": "https://reddit.example/r/logistics/comments/demo_r11", "community": "r/logistics" },
+    { "event_hint": "port-strike", "platform": "reddit", "external_id": "demo_r12", "content": "The pay increase is being reported as 4.5% by the union and 4.2% by the port authority. Worth knowing which figure is in the signed agreement.", "published_at": "2026-02-26T17:30:00Z", "engagement": 254, "url": "https://reddit.example/r/logistics/comments/demo_r12", "community": "r/logistics" },
+    { "event_hint": "port-strike", "platform": "youtube", "external_id": "demo_y6", "content": "Harbour Port strike ends after eleven days: what the pay deal contains", "published_at": "2026-02-26T19:00:00Z", "engagement": 412, "url": "https://youtube.example/watch?v=demo_y6", "community": "Meridian Daily Brief" }
+  ],
+  "market": [
+    {
+      "event_hint": "vantor-leak",
+      "symbol": "VNTR",
+      "name": "Vantor Industries",
+      "is_benchmark": false,
+      "points": [
+        { "timestamp": "2026-02-24T21:00:00Z", "price": 48.1, "volume": 1200000 },
+        { "timestamp": "2026-02-25T21:00:00Z", "price": 48.35, "volume": 1100000 },
+        { "timestamp": "2026-02-26T21:00:00Z", "price": 47.9, "volume": 1300000 },
+        { "timestamp": "2026-02-27T21:00:00Z", "price": 48.6, "volume": 1000000 },
+        { "timestamp": "2026-03-02T21:00:00Z", "price": 48.75, "volume": 1150000 },
+        { "timestamp": "2026-03-03T21:00:00Z", "price": 45.73, "volume": 4600000 },
+        { "timestamp": "2026-03-04T21:00:00Z", "price": 45.62, "volume": 3200000 },
+        { "timestamp": "2026-03-05T21:00:00Z", "price": 45.95, "volume": 2100000 },
+        { "timestamp": "2026-03-06T21:00:00Z", "price": 46.3, "volume": 1700000 }
+      ]
+    },
+    {
+      "event_hint": "vantor-leak",
+      "symbol": "MRDX",
+      "name": "Meridian Composite Index",
+      "is_benchmark": true,
+      "points": [
+        { "timestamp": "2026-02-24T21:00:00Z", "price": 4120.5, "volume": null },
+        { "timestamp": "2026-02-25T21:00:00Z", "price": 4132.0, "volume": null },
+        { "timestamp": "2026-02-26T21:00:00Z", "price": 4118.7, "volume": null },
+        { "timestamp": "2026-02-27T21:00:00Z", "price": 4140.2, "volume": null },
+        { "timestamp": "2026-03-02T21:00:00Z", "price": 4155.8, "volume": null },
+        { "timestamp": "2026-03-03T21:00:00Z", "price": 4148.3, "volume": null },
+        { "timestamp": "2026-03-04T21:00:00Z", "price": 4160.9, "volume": null },
+        { "timestamp": "2026-03-05T21:00:00Z", "price": 4172.4, "volume": null },
+        { "timestamp": "2026-03-06T21:00:00Z", "price": 4180.1, "volume": null }
+      ]
+    }
+  ]
+}

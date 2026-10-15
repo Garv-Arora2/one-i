@@ -1,0 +1,62 @@
+.ratioWrap {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  cursor: help;
+}
+
+.ratio {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  padding: 0.12rem 0.45rem;
+  border: 1.5px solid var(--good);
+  color: var(--good);
+  background: var(--good-dim);
+}
+
+.ratio[data-thin="true"] {
+  border-color: var(--warn);
+  color: var(--warn);
+  background: var(--warn-dim);
+}
+
+.ratioTip {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.45rem);
+  transform: translateX(-50%);
+  z-index: 8;
+  width: max-content;
+  max-width: 18rem;
+  padding: 0.55rem 0.7rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.ratioTip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: var(--ink);
+}
+
+.ratioWrap:hover .ratioTip,
+.ratioWrap:focus-within .ratioTip {
+  display: block;
+}

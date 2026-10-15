@@ -1,0 +1,64 @@
+.rail {
+  position: sticky;
+  top: 4.5rem;
+  align-self: start;
+  padding-top: 0.5rem;
+}
+
+.railTitle {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 0.55rem;
+  margin-bottom: 0.35rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stop {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  text-decoration: none;
+  padding: 0.42rem 0 0.42rem 0.8rem;
+  border-left: 2px solid var(--rule);
+  transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.stop:hover {
+  color: var(--ink);
+  border-left-color: var(--rule-strong);
+}
+
+.stopActive {
+  color: var(--ink);
+  border-left-color: var(--accent);
+  background: var(--paper-deep);
+}
+
+/* Discovery stops — where ONE I differs from a normal news site */
+.stopAccent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.stopAccent:hover { color: var(--accent); }
+
+.stopAccent.stopActive {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .rail { display: none; }
+}

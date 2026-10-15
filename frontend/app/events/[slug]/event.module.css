@@ -1,0 +1,417 @@
+/* Editorial event page */
+
+.page {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ── Back link ────────────────────────────────────────────────────────── */
+.back {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-decoration: none;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 1.5rem;
+}
+
+.back:hover { color: var(--accent); }
+
+/* ── Event header ─────────────────────────────────────────────────────── */
+.header {
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 0;
+}
+
+.kicker {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.headline {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  max-width: 24ch;
+  margin-bottom: 0.85rem;
+}
+
+.crux {
+  font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+  line-height: 1.52;
+  color: var(--ink-soft);
+  max-width: 64ch;
+  margin-bottom: 1rem;
+}
+
+.header figure {
+  max-width: 42rem;
+  margin: 0.2rem 0 1rem;
+}
+
+.headerFacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2.5rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 0.65rem;
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0;
+}
+
+.factLabel {
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.1rem;
+}
+
+.factValue {
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Stats hero: the findings at a glance ─────────────────────────────── */
+.statsHero {
+  background: var(--ink);
+  color: var(--paper);
+  border-top: 2px solid var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.statItem {
+  flex: 1 1 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 1.4rem 1.5rem;
+  border-right: 1px solid rgba(245, 243, 238, 0.14);
+  text-decoration: none;
+  color: inherit;
+}
+
+.statItem:last-child { border-right: 0; }
+
+.statNum {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.statLabel {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 243, 238, 0.55);
+}
+
+/* Discovery metrics — the findings, not the bookkeeping */
+.statAccent {
+  background: var(--accent);
+  transition: background 140ms ease;
+}
+
+.statAccent .statLabel { color: rgba(255, 255, 255, 0.85); }
+
+a.statAccent:hover { background: #a02617; }
+
+/* ── Jump navigation ──────────────────────────────────────────────────── */
+.jump {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 2px solid var(--ink);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.jump::-webkit-scrollbar { display: none; }
+
+.jumpLink {
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-decoration: none;
+  padding: 0.6rem 0.85rem;
+  border-right: 1px solid var(--rule);
+  white-space: nowrap;
+  transition: color 100ms, background 100ms;
+}
+
+.jumpLink:first-child { padding-left: 0; }
+.jumpLink:hover { color: var(--ink); background: var(--paper-deep); }
+
+/* Discovery links — louder than the editorial sections */
+.jumpAccent {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.jumpAccent:hover {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+/* ── Rail + content layout ────────────────────────────────────────────── */
+.railLayout {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.railContent { min-width: 0; }
+
+@media (max-width: 900px) {
+  .railLayout { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* ── Coverage human sentence ──────────────────────────────────────────── */
+.coverageSentence {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 62ch;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+}
+
+/* ── Crux body inside What happened ───────────────────────────────────── */
+.cruxBody {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 72ch;
+}
+
+/* ── Crux parts list ──────────────────────────────────────────────────── */
+.cruxParts {
+  list-style: none;
+  margin-top: 1.25rem;
+  max-width: 68ch;
+  border-top: 1px solid var(--rule);
+}
+
+.cruxPart {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px dotted var(--rule);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+}
+
+.cruxPartLabel {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding-top: 0.15rem;
+}
+
+.cruxPartText {
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+.cruxList {
+  list-style: none;
+  max-width: 72ch;
+}
+
+.cruxGroup {
+  margin-bottom: 1.15rem;
+  padding-bottom: 1.05rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.cruxGroup:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.cruxGroupLabel {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.45rem;
+}
+
+.cruxBullets {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.cruxBullets li {
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 0.55rem;
+  padding-left: 0.25rem;
+}
+
+.cruxBullets li::marker {
+  color: var(--accent);
+}
+
+.ratio {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  margin-left: 0.5rem;
+  padding: 0.12rem 0.45rem;
+  vertical-align: middle;
+  border: 1.5px solid var(--good);
+  color: var(--good);
+  background: var(--good-dim);
+}
+
+.ratio[data-thin="true"] {
+  border-color: var(--warn);
+  color: var(--warn);
+  background: var(--warn-dim);
+}
+
+/* ── Context ──────────────────────────────────────────────────────────── */
+.contextBody {
+  max-width: 72ch;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+/* ── Original reports ─────────────────────────────────────────────────── */
+.reportsToggle > summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink);
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.reportsToggle > summary::-webkit-details-marker { display: none; }
+.reportsToggle > summary::after { content: " ↓"; color: var(--accent); }
+.reportsToggle[open] > summary::after { content: " ↑"; }
+.reportsToggle > summary:hover { color: var(--accent); }
+.reportsToggle[open] > summary { margin-bottom: 0.75rem; }
+
+.summaryNote {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  margin-top: 0.2rem;
+}
+
+.articleTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+}
+
+.articleTable th {
+  text-align: left;
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 600;
+  padding: 0 1rem 0.5rem 0;
+  border-bottom: 2px solid var(--ink);
+}
+
+.articleTable td {
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: baseline;
+}
+
+.articleSource {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.articleTitle {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.articleTitle a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.articleTitle a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+.articleWhen {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--ink-faint);
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 760px) {
+  .statItem { flex: 1 1 8rem; padding: 1rem 1.1rem; }
+
+  .cruxPart { grid-template-columns: 1fr; gap: 0.1rem; }
+
+  .headerFacts { gap: 0 1.5rem; }
+
+  .articleTable th:nth-child(3),
+  .articleTable td:nth-child(3) { display: none; }
+}

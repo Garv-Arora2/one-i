@@ -1,0 +1,229 @@
+/* ── Reaction panel ────────────────────────────────────────────────────── */
+
+.disclaimer {
+  font-family: var(--sans);
+  font-size: 0.79rem;
+  color: var(--ink-faint);
+  border-left: 2px solid var(--rule-strong);
+  padding: 0.4rem 0.8rem;
+  margin-top: 1.25rem;
+  background: var(--paper-deep);
+}
+
+.reactionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--rule);
+  margin-bottom: 1.5rem;
+}
+
+.reactionGridSingle { grid-template-columns: 1fr; }
+
+.platformCol {
+  padding: 1.1rem 1.2rem 1.3rem;
+  min-width: 0;
+}
+
+.redditCol {
+  background: #dae0e6;
+  border-right: 1px solid var(--rule);
+  padding: 0.75rem;
+}
+
+.youtubeCol {
+  background: #fff;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.platformBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.brandLogo {
+  width: 28px;
+  height: 28px;
+}
+
+.ytBrandLogo {
+  width: 40px;
+  height: 28px;
+}
+
+.platformKicker {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.1rem;
+}
+
+.redditCol .platformKicker { color: #FF4500; }
+.youtubeCol .platformKicker { color: #FF0000; }
+
+.platformTitle {
+  font-size: 1.05rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Classic Reddit post */
+.redditPost {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0.35rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 0.55rem;
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.redditVote {
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem 0.15rem;
+  color: #878a8c;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.redditChevron { color: #878a8c; font-size: 1.05rem; }
+.redditChevronDown { color: #878a8c; font-size: 1.05rem; }
+.redditScore {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #1a1a1b;
+  padding: 0.15rem 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.redditBody { padding: 0.4rem 0.55rem 0.45rem 0.15rem; min-width: 0; }
+
+.redditMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+  color: #787c7e;
+  margin-bottom: 0.2rem;
+}
+
+.redditSnoo { width: 16px; height: 16px; flex: none; }
+
+.redditSub {
+  color: #1a1a1b;
+  font-weight: 700;
+}
+
+.redditTitle {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #222;
+  margin: 0 0 0.3rem;
+}
+
+.redditTitle a { color: #222; text-decoration: none; }
+.redditTitle a:hover { color: #FF4500; }
+
+.redditActions {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #878a8c;
+  margin: 0;
+}
+
+/* Classic YouTube comment */
+.ytComment {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: 0.7rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.ytAvatar {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: #c4302b;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ytMeta {
+  font-size: 0.78rem;
+  color: #606060;
+  margin-bottom: 0.2rem;
+}
+
+.ytAuthor {
+  color: #030303;
+  font-weight: 600;
+  margin-right: 0.45rem;
+}
+
+.ytText {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #030303;
+  margin: 0 0 0.35rem;
+}
+
+.ytText a { color: #065fd4; text-decoration: none; }
+.ytText a:hover { text-decoration: underline; }
+
+.ytActions {
+  display: flex;
+  gap: 1.1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #606060;
+  margin: 0;
+}
+
+.subList {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.subList li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px dotted var(--rule);
+  font-family: var(--sans);
+  font-size: 0.88rem;
+}
+
+.subName { font-weight: 700; color: var(--ink); }
+.subCount { font-variant-numeric: tabular-nums; color: var(--ink-faint); }
+
+.emptyPlat {
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  color: var(--ink-faint);
+}
+
+.themeBlock {
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .reactionGrid { grid-template-columns: 1fr; }
+  .redditCol { border-right: 0; border-bottom: 1px solid var(--rule); }
+}
